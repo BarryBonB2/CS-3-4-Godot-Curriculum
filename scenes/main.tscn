@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://cpcjxr26k8tgw"]
+[gd_scene load_steps=14 format=4 uid="uid://cpcjxr26k8tgw"]
 
 [ext_resource type="PackedScene" uid="uid://cqvpxnx2pwqhk" path="res://scenes/player.tscn" id="1_2j8vx"]
 [ext_resource type="Script" uid="uid://bnk74kv0ariww" path="res://scripts/game_world.gd" id="2_3k9wy"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c6cn64y21oke7" path="res://scenes/torch.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://c8mf4562xlcu8" path="res://scenes/door.tscn" id="7_tipki"]
 [ext_resource type="PackedScene" uid="uid://5p2ev4o8h7si" path="res://scenes/lever.tscn" id="8_85g3d"]
+[ext_resource type="PackedScene" uid="uid://b1fedbrpsed3h" path="res://scenes/Key.tscn" id="10_trceg"]
 [ext_resource type="PackedScene" uid="uid://c6gaa4kprawy0" path="res://scenes/enemies/slime.tscn" id="11_ya4ey"]
 
 [sub_resource type="Environment" id="Environment_jyhfs"]
@@ -59,7 +60,6 @@ position = Vector2(-204.5, -56.5)
 
 [node name="HealthPotion" parent="Tilemap/StuffOnTop" instance=ExtResource("6_tefeu")]
 position = Vector2(18, 17.5)
-amount = 5
 
 [node name="Coin" parent="Tilemap/StuffOnTop" instance=ExtResource("5_tbgi4")]
 position = Vector2(-9.5, 26)
@@ -72,6 +72,11 @@ position = Vector2(-183.5, 105)
 
 [node name="Chest" parent="Tilemap/StuffOnTop" instance=ExtResource("6_tipki")]
 position = Vector2(150, 29)
+
+[node name="Key" parent="Tilemap/StuffOnTop" instance=ExtResource("10_trceg")]
+position = Vector2(180, -34.5)
+type = "chest_key"
+label = "gold"
 
 [node name="Player" parent="." instance=ExtResource("1_2j8vx")]
 unique_name_in_owner = true
@@ -88,6 +93,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="slime" parent="." instance=ExtResource("11_ya4ey")]
-position = Vector2(-473, -41)
+position = Vector2(-443, 100)
 speed = 150
-move_points = Array[Vector2]([Vector2(-350, -21), Vector2(-520, -68)])
+move_points = Array[Vector2]([Vector2(-350, -21), Vector2(-520, -68), Vector2(-443, 100)])

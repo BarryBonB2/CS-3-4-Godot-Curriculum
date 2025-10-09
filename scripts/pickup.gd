@@ -56,7 +56,14 @@ func configure_pickup(_type : String, _label : String) -> bool:
 			amount = 100
 			return true
 		else: return false
+	elif _type == "Door_key":
+		if label == "silver":
+			amount = 1
+			return true
+		else: return false
+	elif _type == "chest_key":
+		if _label == "gold":
+			amount = 1
+			return true
+		else: return false
 	else: return false
-		
-			
-			
