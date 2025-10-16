@@ -95,7 +95,8 @@ grow_vertical = 2
 
 [node name="slime" parent="." instance=ExtResource("11_ya4ey")]
 position = Vector2(-443, 100)
-speed = 150
+damage_amount = -10
+speed = 100
 move_points = Array[Vector2]([Vector2(-350, -21), Vector2(-520, -68), Vector2(-443, 100)])
 
 [node name="Vampyre" parent="." instance=ExtResource("13_trceg")]

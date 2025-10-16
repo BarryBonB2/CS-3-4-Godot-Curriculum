@@ -52,10 +52,11 @@ func _on_hit_radius_body_shape_entered(body_rid: RID, body: Node2D, body_shape_i
 func _reset_damage_cooldown():
 	can_damage = true
 	print(" is ready to damage again")
-	speed = 150
+	speed = 100
 	
 	
 func _on_hit_radius_body_shape_exited(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
 	if body is Player:
 		can_damage = false
 		animated_sprite.stop()
+		animated_sprite.play("idle")

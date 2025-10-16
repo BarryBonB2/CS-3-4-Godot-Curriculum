@@ -1,17 +1,25 @@
-[gd_scene load_steps=9 format=3 uid="uid://bqems63ld323y"]
+[gd_scene load_steps=11 format=3 uid="uid://bqems63ld323y"]
 
 [ext_resource type="Script" uid="uid://draxyi2yul4g2" path="res://scripts/health_potion.gd" id="1_np0hw"]
-[ext_resource type="Texture2D" uid="uid://udxnr5kddbr5" path="res://assets/2D Pixel Dungeon Asset Pack/character and tileset/demonstration.png" id="2_gan2x"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1nwoc"]
-atlas = ExtResource("2_gan2x")
-region = Rect2(48, 176, 16, 16)
+[ext_resource type="Texture2D" uid="uid://b1xvgbof1t608" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_1_1.png" id="2_mlk75"]
+[ext_resource type="Texture2D" uid="uid://q0gmppglq2b7" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_1_2.png" id="3_lwb0h"]
+[ext_resource type="Texture2D" uid="uid://d2d54uub11lfl" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_1_3.png" id="4_a6wep"]
+[ext_resource type="Texture2D" uid="uid://bxvk2nlwbnfk8" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_1_4.png" id="5_oo0wb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mlk75"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1nwoc")
+"texture": ExtResource("2_mlk75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lwb0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a6wep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oo0wb")
 }],
 "loop": true,
 "name": &"new_animation",
@@ -105,6 +113,7 @@ label = "small"
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_mlk75")
 animation = &"new_animation"
+autoplay = "new_animation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(2.5, 2.5)

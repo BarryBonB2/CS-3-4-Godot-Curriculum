@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://b1fedbrpsed3h"]
 
-[ext_resource type="Script" uid="uid://rxq42y2ohpe5" path="res://scenes/key.gd" id="1_aruhq"]
+[ext_resource type="Script" uid="uid://rxq42y2ohpe5" path="res://scripts/key.gd" id="1_aruhq"]
 [ext_resource type="Texture2D" uid="uid://dddcdpi2j4qi0" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/keys/keys_1_1.png" id="1_px33k"]
 [ext_resource type="Texture2D" uid="uid://b8r8re7g52c8w" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/keys/keys_1_2.png" id="3_kxh1p"]
 [ext_resource type="Texture2D" uid="uid://dcrsuk64v1n85" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/keys/keys_1_4.png" id="4_r2qov"]
@@ -117,6 +117,7 @@ shape = SubResource("RectangleShape2D_aruhq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_iw63h")
+autoplay = "default"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

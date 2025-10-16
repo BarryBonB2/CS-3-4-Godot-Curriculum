@@ -1,47 +1,31 @@
-[gd_scene load_steps=12 format=3 uid="uid://7j3n0huo8mqr"]
+[gd_scene load_steps=8 format=3 uid="uid://7j3n0huo8mqr"]
 
 [ext_resource type="Script" uid="uid://co5hnowm81a7y" path="res://scripts/enemies/enemy_base.gd" id="1_1b4xk"]
-[ext_resource type="Texture2D" uid="uid://i36uk7yjwsg2" path="res://assets/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v1/vampire_v1_1.png" id="2_7gk7y"]
-[ext_resource type="Texture2D" uid="uid://bf2m44bmu5ev5" path="res://assets/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v1/vampire_v1_2.png" id="3_ejsbx"]
-[ext_resource type="Texture2D" uid="uid://buowd4paevebp" path="res://assets/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v1/vampire_v1_3.png" id="4_1motg"]
-[ext_resource type="Texture2D" uid="uid://dg8xrcvp73bsa" path="res://assets/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v1/vampire_v1_4.png" id="5_vdh5p"]
+[ext_resource type="Texture2D" uid="uid://dvecmew3nbnie" path="res://assets/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v2/vampire_v2_1.png" id="2_1b4xk"]
+[ext_resource type="Texture2D" uid="uid://bfoj3je1xdq1u" path="res://assets/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v2/vampire_v2_2.png" id="3_7gk7y"]
+[ext_resource type="Texture2D" uid="uid://cu6g6anwmyu8v" path="res://assets/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v2/vampire_v2_4.png" id="4_ejsbx"]
+[ext_resource type="Texture2D" uid="uid://0t32otcthltw" path="res://assets/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v2/vampire_v2_3.png" id="5_1motg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_06nuv"]
 size = Vector2(25, 17.375)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k68nb"]
-atlas = ExtResource("2_7gk7y")
-region = Rect2(1, 1, 14, 14)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_un50i"]
-atlas = ExtResource("3_ejsbx")
-region = Rect2(1, 1, 14, 14)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ye51d"]
-atlas = ExtResource("4_1motg")
-region = Rect2(1, 0, 14, 15)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0jruo"]
-atlas = ExtResource("5_vdh5p")
-region = Rect2(1, 0, 14, 15)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i7uxf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k68nb")
+"texture": ExtResource("2_1b4xk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_un50i")
+"texture": ExtResource("3_7gk7y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ye51d")
+"texture": ExtResource("5_1motg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0jruo")
+"texture": ExtResource("4_ejsbx")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 5.0
 }]
 
@@ -57,3 +41,5 @@ shape = SubResource("RectangleShape2D_06nuv")
 position = Vector2(0.285157, 0.48828167)
 scale = Vector2(2.530692, 2.9268975)
 sprite_frames = SubResource("SpriteFrames_i7uxf")
+animation = &"idle"
+autoplay = "idle"

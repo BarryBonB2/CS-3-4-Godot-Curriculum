@@ -1,54 +1,60 @@
-[gd_scene load_steps=12 format=3 uid="uid://beba783l4j8gp"]
+[gd_scene load_steps=13 format=3 uid="uid://beba783l4j8gp"]
 
-[ext_resource type="Texture2D" uid="uid://c6mq4sqfm73v5" path="res://assets/free-2d-top-down-pixel-dungeon-asset-pack/doors_lever_chest_animation.png" id="1_oii8l"]
 [ext_resource type="Script" uid="uid://c1dsqg6uhbpgl" path="res://scripts/chest.gd" id="1_sy5e1"]
-[ext_resource type="PackedScene" uid="uid://l7oauc6tswy3" path="res://scenes/enemies/detection_radius.tscn" id="3_gqd3d"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sy5e1"]
-atlas = ExtResource("1_oii8l")
-region = Rect2(0, 128, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gqd3d"]
-atlas = ExtResource("1_oii8l")
-region = Rect2(32, 128, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yue2o"]
-atlas = ExtResource("1_oii8l")
-region = Rect2(64, 128, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yhylo"]
-atlas = ExtResource("1_oii8l")
-region = Rect2(96, 128, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w02o5"]
-atlas = ExtResource("1_oii8l")
-region = Rect2(128, 128, 32, 32)
+[ext_resource type="Texture2D" uid="uid://b8ddq7ilmylqq" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_1.png" id="2_w02o5"]
+[ext_resource type="Texture2D" uid="uid://3dtyd4srmtqq" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_2.png" id="3_ilhio"]
+[ext_resource type="Texture2D" uid="uid://bjyohi8spbbwr" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_3.png" id="4_kg5gm"]
+[ext_resource type="Texture2D" uid="uid://7ny8jgi3glnn" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_4.png" id="5_8me8i"]
+[ext_resource type="Texture2D" uid="uid://2cu00lnai23m" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_open_1.png" id="6_lfymr"]
+[ext_resource type="Texture2D" uid="uid://b0ysn0tajsp7e" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_open_2.png" id="7_udamv"]
+[ext_resource type="Texture2D" uid="uid://bjsndls5dakhv" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_open_3.png" id="8_up8i7"]
+[ext_resource type="Texture2D" uid="uid://dsas2w4u6302q" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_open_4.png" id="9_nnvde"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ilhio"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sy5e1")
+"texture": ExtResource("2_w02o5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gqd3d")
+"texture": ExtResource("3_ilhio")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yue2o")
+"texture": ExtResource("4_kg5gm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yhylo")
+"texture": ExtResource("5_8me8i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_kg5gm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w02o5")
+"texture": ExtResource("5_8me8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lfymr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_udamv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_up8i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nnvde")
 }],
 "loop": false,
-"name": &"default",
+"name": &"open",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kg5gm"]
-size = Vector2(20, 18)
+size = Vector2(18, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sy5e1"]
 size = Vector2(34, 17)
@@ -59,9 +65,10 @@ script = ExtResource("1_sy5e1")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 3)
 sprite_frames = SubResource("SpriteFrames_ilhio")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 0)
+position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_kg5gm")
 
 [node name="Detection radius" type="Area2D" parent="."]
@@ -69,8 +76,6 @@ shape = SubResource("RectangleShape2D_kg5gm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detection radius"]
 position = Vector2(0, 8.5)
 shape = SubResource("RectangleShape2D_sy5e1")
-
-[node name="Detection Radius" parent="Detection radius" instance=ExtResource("3_gqd3d")]
 
 [connection signal="body_entered" from="Detection radius" to="." method="_on_detection_radius_body_entered"]
 [connection signal="body_exited" from="Detection radius" to="." method="_on_detection_radius_body_exited"]
