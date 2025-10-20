@@ -7,7 +7,8 @@ func animate_opening() -> void:
 
 func _on_detection_radius_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
-
+#if player has key 
+#
 
 func _on_detection_radius_body_exited(body: Node2D) -> void:
 	pass # Replace with function body.

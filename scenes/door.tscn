@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c8mf4562xlcu8"]
+[gd_scene load_steps=17 format=3 uid="uid://c8mf4562xlcu8"]
 
 [ext_resource type="Script" uid="uid://bvenu0ll76s8p" path="res://scripts/door.gd" id="1_hpvv5"]
 [ext_resource type="Texture2D" uid="uid://kj17m5wnf01g" path="res://assets/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="2_uvdjg"]
@@ -77,7 +77,42 @@ animations = [{
 "texture": SubResource("AtlasTexture_4ayau")
 }],
 "loop": true,
-"name": &"default",
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83dcw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ey00f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ju5n0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t58dd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18pbm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_la1wf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5w8r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgbum")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pg2b6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ayau")
+}],
+"loop": true,
+"name": &"open",
 "speed": 5.0
 }]
 
@@ -87,14 +122,26 @@ size = Vector2(16, 16)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_uvdjg"]
 polygon = PackedVector2Array(8, -4, 8, -8, -8, -8, -8, -4)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_uvdjg"]
+radius = 23.086792
+
 [node name="Door" type="AnimatableBody2D"]
 script = ExtResource("1_hpvv5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_41c0y")
+animation = &"closed"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_uvdjg")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_uvdjg")
+
+[node name="detection radius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection radius"]
+shape = SubResource("CircleShape2D_uvdjg")
+
+[connection signal="body_entered" from="detection radius" to="." method="_on_detection_radius_body_entered"]
+[connection signal="body_exited" from="detection radius" to="." method="_on_detection_radius_body_exited"]

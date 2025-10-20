@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c6gaa4kprawy0"]
+[gd_scene load_steps=24 format=3 uid="uid://c6gaa4kprawy0"]
 
 [ext_resource type="Script" uid="uid://co5hnowm81a7y" path="res://scripts/enemies/enemy_base.gd" id="1_4h4y0"]
 [ext_resource type="Texture2D" uid="uid://barrcryhoe1ep" path="res://assets/Platformer Slimes v1.3/Ogre Slime Spritesheet.png" id="2_ahq63"]
@@ -47,28 +47,56 @@ region = Rect2(96, 0, 16, 16)
 atlas = ExtResource("2_ahq63")
 region = Rect2(112, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfyvu"]
+atlas = ExtResource("2_ahq63")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_at850"]
+atlas = ExtResource("2_ahq63")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbf5k"]
+atlas = ExtResource("2_ahq63")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvrjd"]
+atlas = ExtResource("2_ahq63")
+region = Rect2(96, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nx7r3"]
+atlas = ExtResource("2_ahq63")
+region = Rect2(112, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdhaw"]
+atlas = ExtResource("2_ahq63")
+region = Rect2(128, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4uwr"]
+atlas = ExtResource("2_ahq63")
+region = Rect2(144, 16, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_uhx0m"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uhx0m")
 }, {
-"duration": 1.0,
+"duration": 0.71,
 "texture": SubResource("AtlasTexture_7uxu4")
 }, {
-"duration": 1.0,
+"duration": 0.71,
 "texture": SubResource("AtlasTexture_mdcui")
 }, {
-"duration": 1.0,
+"duration": 0.71,
 "texture": SubResource("AtlasTexture_ikdmk")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jjup5")
 }, {
-"duration": 1.0,
+"duration": 0.71,
 "texture": SubResource("AtlasTexture_ikdmk")
 }, {
-"duration": 1.0,
+"duration": 0.71,
 "texture": SubResource("AtlasTexture_mdcui")
 }, {
 "duration": 1.0,
@@ -97,6 +125,32 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfyvu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_at850")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbf5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvrjd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nx7r3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdhaw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4uwr")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4h4y0"]
@@ -114,7 +168,7 @@ position = Vector2(0.75000095, -0.8750005)
 scale = Vector2(1.7321429, 1.6700002)
 sprite_frames = SubResource("SpriteFrames_uhx0m")
 animation = &"Attack"
-autoplay = "idle"
+autoplay = "walk"
 
 [node name="Detection Radius" parent="." instance=ExtResource("3_b58ev")]
 

@@ -8,7 +8,7 @@ class_name Player
 @export var maxHealth : int = 100
 @export var health : int = maxHealth
 @export var coins : int = 0
-
+@export var keys : int =0
 
 var facing: Vector2 = Vector2.ZERO
 
@@ -58,6 +58,9 @@ func collect_pickup(_type : String, _amount : int):
 	if _type == "coin":
 		coins += _amount
 		print("Coins: " + str(coins))
+	elif _type == "chest_key":
+		keys += _amount
+		print ("keys:" + str(keys))
 	elif _type == "health_potion":
 		change_health(_amount)
 		

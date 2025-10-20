@@ -25,7 +25,6 @@ func _on_detection_radius_body_entered(body: Node2D) -> void:
 	if body is Player:
 		is_hostile = true
 	
-	pass # Replace with function body.
 
 
 func _on_detection_radius_body_exited(body: Node2D) -> void:
@@ -59,4 +58,4 @@ func _on_hit_radius_body_shape_exited(body_rid: RID, body: Node2D, body_shape_in
 	if body is Player:
 		can_damage = false
 		animated_sprite.stop()
-		animated_sprite.play("idle")
+		animated_sprite.play("walk")
