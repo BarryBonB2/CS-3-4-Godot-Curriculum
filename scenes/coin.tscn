@@ -14,7 +14,7 @@ shader_parameter/color = Color(0.82507616, 0.2147145, 0.2018384, 1)
 [sub_resource type="SpriteFrames" id="SpriteFrames_xmuha"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 5.0,
 "texture": ExtResource("2_1ikuy")
 }, {
 "duration": 1.0,
@@ -32,7 +32,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kfxoj"]
-radius = 4.1231055
+radius = 6.0
 
 [sub_resource type="Animation" id="Animation_gan2x"]
 length = 0.001

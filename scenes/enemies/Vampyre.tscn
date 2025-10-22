@@ -38,8 +38,8 @@ position = Vector2(0.5, 11.6875)
 shape = SubResource("RectangleShape2D_06nuv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0.285157, 0.48828167)
-scale = Vector2(2.530692, 2.9268975)
+position = Vector2(0.285157, 2.9517317)
+scale = Vector2(2.530692, 2.6189666)
 sprite_frames = SubResource("SpriteFrames_i7uxf")
 animation = &"idle"
 autoplay = "idle"
