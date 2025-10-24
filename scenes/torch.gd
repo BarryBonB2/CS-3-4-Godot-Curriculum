@@ -4,6 +4,9 @@ extends Node2D
 
 @export var label : String = ""
 
+func _ready() -> void:
+	orientation()
+
 
 func orientation():
 	if label == "front":

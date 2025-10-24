@@ -49,23 +49,31 @@ tile_set = ExtResource("3_fpihc")
 
 [node name="Torch3" parent="Tilemap/StuffOnTop" instance=ExtResource("7_o6xl0")]
 position = Vector2(-265, 98)
-type = "torch"
 label = "side"
+
+[node name="Torch4" parent="Tilemap/StuffOnTop" instance=ExtResource("7_o6xl0")]
+position = Vector2(29.5, -183)
+label = "front"
+
+[node name="Torch5" parent="Tilemap/StuffOnTop" instance=ExtResource("7_o6xl0")]
+position = Vector2(-11, -24.5)
+label = "front"
 
 [node name="Spike" parent="Tilemap/StuffOnTop" instance=ExtResource("4_j0bf8")]
 position = Vector2(88, 8)
 
 [node name="Torch" parent="Tilemap/StuffOnTop" instance=ExtResource("7_o6xl0")]
 position = Vector2(195, -56.5)
-type = "torch"
 label = "front"
 
 [node name="Flag" parent="Tilemap/StuffOnTop" instance=ExtResource("4_a8y0u")]
 position = Vector2(-40, -25.5)
 
+[node name="Flag2" parent="Tilemap/StuffOnTop" instance=ExtResource("4_a8y0u")]
+position = Vector2(71, -25.5)
+
 [node name="Torch2" parent="Tilemap/StuffOnTop" instance=ExtResource("7_o6xl0")]
 position = Vector2(-204.5, -56.5)
-type = "torch"
 label = "front"
 
 [node name="HealthPotion" parent="Tilemap/StuffOnTop" instance=ExtResource("6_tefeu")]
