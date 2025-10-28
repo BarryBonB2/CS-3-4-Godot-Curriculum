@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Inventory_item" load_steps=3 format=3 uid="uid://beikutvgv1exf"]
+
+[ext_resource type="Script" uid="uid://bl662cbfmw0jp" path="res://scripts/Inventory_item.gd" id="1_eaogd"]
+[ext_resource type="Texture2D" uid="uid://b1xvgbof1t608" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_1_1.png" id="2_b03sv"]
+
+[resource]
+script = ExtResource("1_eaogd")
+name = "potion"
+sprite = ExtResource("2_b03sv")
+metadata/_custom_type_script = "uid://bl662cbfmw0jp"
