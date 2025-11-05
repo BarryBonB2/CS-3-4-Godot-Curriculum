@@ -220,3 +220,7 @@ func upgrade_health(amount: float) -> bool:
 func upgrade_speed(amount: float) -> bool:
 	move_speed += amount
 	return true
+
+ func upgrade_damage(amount: float) -> bool:
+	damage += amount
+	return true

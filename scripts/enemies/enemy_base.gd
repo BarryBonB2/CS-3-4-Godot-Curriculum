@@ -185,9 +185,9 @@ func _default_behavior(delta: float) -> void:
 		# Flip sprite based on movement direction
 		if sprite and direction_to_player.x != 0:
 			if sprite is Sprite2D:
-				sprite.flip_h = direction_to_player.x < 0
+				sprite.flip_h = direction_to_player.x > 0
 			elif sprite is AnimatedSprite2D:
-				sprite.flip_h = direction_to_player.x < 0
+				sprite.flip_h = direction_to_player.x > 0
 
 
 ## Apply separation force to avoid clustering

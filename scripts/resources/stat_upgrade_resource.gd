@@ -40,7 +40,7 @@ class_name StatUpgradeResource
 ##
 ## To add a new stat type (like SPEED or DAMAGE), follow these steps:
 ##
-## STEP 1: Add to the UpgradeType enum (in THIS file, line ~9):
+## STEP 1: Add to the UpgradeType enum (in THIS file, line ~78):
 ##    enum UpgradeType {
 ##        HEALTH,
 ##        SPEED,      # <-- Add new type here
@@ -77,6 +77,7 @@ class_name StatUpgradeResource
 ## Enum defining available upgrade types
 enum UpgradeType {
 	HEALTH,    ## Increases max health
+	DAMAGE,
 		
 }
 

@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://cnp8r3naqst6h"]
+[gd_resource type="SpriteFrames" load_steps=13 format=3 uid="uid://cnp8r3naqst6h"]
 
 [ext_resource type="Texture2D" uid="uid://barrcryhoe1ep" path="res://assets/Platformer Slimes v1.3/Ogre Slime Spritesheet.png" id="1_texture"]
 
@@ -22,6 +22,30 @@ region = Rect2(96, 0, 16, 16)
 atlas = ExtResource("1_texture")
 region = Rect2(112, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_svba3"]
+atlas = ExtResource("1_texture")
+region = Rect2(63, 17, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvsif"]
+atlas = ExtResource("1_texture")
+region = Rect2(79, 17, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhr3s"]
+atlas = ExtResource("1_texture")
+region = Rect2(96, 17, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hbwg"]
+atlas = ExtResource("1_texture")
+region = Rect2(113, 17, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gspye"]
+atlas = ExtResource("1_texture")
+region = Rect2(129, 17, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvvs7"]
+atlas = ExtResource("1_texture")
+region = Rect2(145, 17, 16, 17)
+
 [resource]
 animations = [{
 "frames": [{
@@ -41,6 +65,29 @@ animations = [{
 "texture": SubResource("AtlasTexture_5")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"bana",
 "speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svba3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvsif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhr3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hbwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gspye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvvs7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
 }]
