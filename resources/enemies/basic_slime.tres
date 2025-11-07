@@ -10,7 +10,5 @@ enemy_name = "Basic Slime"
 animated_frames = ExtResource("2_frames")
 sprite_scale = 2.0
 max_health = 10.0
-contact_damage = 50.0
-move_speed = 150.0
 detection_range = 800.0
 xp_value = 5

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ProjectileWeaponResource" load_steps=4 format=3 uid="uid://odn5mfo4ntsm"]
+
+[ext_resource type="Texture2D" uid="uid://h8oj84asar6x" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_2_1.png" id="1_on7os"]
+[ext_resource type="Resource" uid="uid://b3u4qh6cc1fwm" path="res://resources/projectiles/not_basic_projectile.tres" id="2_rpsrt"]
+[ext_resource type="Script" uid="uid://c6yex7bm6vt2g" path="res://scripts/resources/projectile_weapon_resource.gd" id="3_gaw6j"]
+
+[resource]
+script = ExtResource("3_gaw6j")
+projectile_config = ExtResource("2_rpsrt")
+projectile_count = 5
+spread_angle = 70.0
+item_id = "basic_pistol"
+item_name = "Basic Pistol"
+description = "A simple firearm that shoots basic projectiles. Perfect for starting your survival journey."
+icon = ExtResource("1_on7os")
+value = 50
+fire_rate = 0.55
+accuracy_spread = 5.0
+weapon_sprite = ExtResource("1_on7os")
