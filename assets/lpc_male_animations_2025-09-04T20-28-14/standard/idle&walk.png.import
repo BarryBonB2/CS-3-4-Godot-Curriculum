@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c24bi32bpwg7h"
-path="res://.godot/imported/2025_11_07_0pv_Kleki.png-378b5f63433529814bc9542fafba8a62.ctex"
+path="res://.godot/imported/idle&walk.png-5b25231366e186cba0b9b4177213f8b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/lpc_male_animations_2025-09-04T20-28-14/standard/2025_11_07_0pv_Kleki.png"
-dest_files=["res://.godot/imported/2025_11_07_0pv_Kleki.png-378b5f63433529814bc9542fafba8a62.ctex"]
+source_file="res://assets/lpc_male_animations_2025-09-04T20-28-14/standard/idle&walk.png"
+dest_files=["res://.godot/imported/idle&walk.png-5b25231366e186cba0b9b4177213f8b8.ctex"]
 
 [params]
 

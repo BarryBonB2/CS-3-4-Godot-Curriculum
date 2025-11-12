@@ -56,6 +56,8 @@ var facing: Vector2 = Vector2.ZERO
 @export var max_health: float = 100.0
 var current_health: float = 100.0
 
+@export var damage_mult = 1.0
+
 # Level and Experience
 var level: int = 1
 var current_xp: float = 0.0
@@ -219,4 +221,9 @@ func upgrade_health(amount: float) -> bool:
 ## Returns true on successful upgrade
 func upgrade_speed(amount: float) -> bool:
 	move_speed += amount
+	return true
+
+
+func damage_upgrade(amount: float) -> bool:
+	damage_mult += amount
 	return true

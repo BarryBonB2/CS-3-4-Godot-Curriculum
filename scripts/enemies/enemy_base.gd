@@ -167,7 +167,7 @@ func _physics_process(delta: float) -> void:
 
 
 ## Default enemy behavior: chase the player
-func _default_behavior(delta: float) -> void:
+func _default_behavior(_delta: float) -> void:
 	# Check if player is in detection range
 	var distance_to_player = global_position.distance_to(player.global_position)
 
@@ -212,6 +212,7 @@ func apply_separation(current_direction: Vector2) -> Vector2:
 ## Take damage from player weapons
 ## Returns true if this damage killed the enemy
 func take_damage(amount: float) -> bool:
+	amount *= player.damage_mult
 	current_health -= amount
 
 	# Visual feedback (optional: flash sprite)
