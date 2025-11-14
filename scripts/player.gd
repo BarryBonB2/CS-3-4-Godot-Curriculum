@@ -42,6 +42,7 @@ class_name Player
 ## ============================================================================
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var weapon_system: WeaponSystem = $WeaponSystem
 
 # Movement - Controls how fast the player moves
 @export var move_speed: float = 200.0
